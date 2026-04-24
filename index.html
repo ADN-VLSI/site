@@ -150,6 +150,28 @@
             animation: pulse 2.6s ease-in-out infinite;
         }
 
+        .site-banner {
+            margin-bottom: 18px;
+            padding: 12px 16px;
+            border-radius: 14px;
+            background: linear-gradient(90deg, rgba(98,224,217,0.06), rgba(255,209,102,0.04));
+            border: 1px solid rgba(98,224,217,0.12);
+            color: #e9fff8;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .site-banner p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .site-banner strong {
+            color: var(--warning);
+            font-weight: 800;
+        }
+
         .hero {
             display: grid;
             grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
@@ -616,6 +638,14 @@
 </head>
 <body>
     <div class="page">
+        <div class="site-banner" role="status" aria-live="polite">
+            <p>
+                Unable to attend the Prescreening MCQ session? Please stay tuned to our LinkedIn profile for the next batch of internship opportunities.
+                <br>
+                <strong>Note:</strong> The onsite written exam for qualifiers will be held on Thursday, 30th April.
+                Candidates who pass the Prescreening MCQ test will be shortlisted for the onsite written exam.
+            </p>
+        </div>
         <header class="topbar">
             <div class="brand-lockup">
                 <div class="brand-logo">
@@ -736,6 +766,9 @@
                     <h2>Next Stage Eligibility</h2>
                     <p>
                         This online MCQ assessment is the mandatory prescreening step for the RTL Design &amp; Verification Internship. Candidates who pass will be shortlisted for the onsite written exam.
+                    </p>
+                    <p style="margin-top:12px;">
+                        <strong>Onsite written exam date:</strong> Thursday, 30th April.
                     </p>
                 </article>
 
