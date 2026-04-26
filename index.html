@@ -171,6 +171,25 @@
             color: var(--warning);
             font-weight: 800;
         }
+        
+        .beat-button {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 14px 20px;
+            border-radius: 14px;
+            background: linear-gradient(90deg, #62e0d9, #94f0b6);
+            color: #00323a;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(98, 224, 217, 0.14);
+            transform-origin: center;
+            animation: beat 1s ease-in-out infinite;
+        }
+
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
 
         .hero {
             display: grid;
@@ -656,7 +675,7 @@
                     <strong>RTL Design &amp; Verification Internship Prescreening</strong>
                 </div>
             </div>
-            <div class="live-note">Exam link release: 26 April 2026, 11:00 AM</div>
+            <div class="live-note">Exam link released</div>
         </header>
 
         <main>
@@ -675,7 +694,7 @@
                     <div class="callout">
                         <span class="callout-label">Exam Link Availability</span>
                         <p>
-                            The Prescreening MCQ Exam link will be provided on this page on <strong>26th April 2026 at 11:00 AM</strong>.
+                            The Prescreening MCQ Exam link has been released and is available below.
                         </p>
                         <p class="timing-line">
                             The 70 marks MCQ exam duration is 35 minutes and ends at <strong>11:35 AM</strong>. No submission will be accepted afterwards.
@@ -688,8 +707,8 @@
                             <span>Minimum passing mark required to proceed</span>
                         </div>
                         <div class="fact">
-                            <strong>11:00</strong>
-                            <span>Exam access opens on 26 April 2026</span>
+                            <strong>11:35</strong>
+                            <span>Exam submission closes on 26 April 2026</span>
                         </div>
                         <div class="fact">
                             <strong>11:35</strong>
@@ -700,7 +719,7 @@
 
                 <aside class="panel hero-side">
                     <div class="section-label">Countdown</div>
-                    <div class="status-line" id="statusLine">Link activates in</div>
+                    <div class="status-line" id="statusLine">Assessment window closes in</div>
                     <div class="countdown" aria-live="polite">
                         <div class="count-card">
                             <strong id="days">00</strong>
@@ -720,10 +739,12 @@
                         </div>
                     </div>
 
+                    <a class="beat-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfOrBfPdVhxQgxjf4nWmAgc1WtpTqpcvXDu9oit8x7FdlwhOA/viewform?usp=header" target="_blank" rel="noopener">Open Assessment</a>
+
                     <div class="window-box">
                         <h3>Assessment Window</h3>
                         <p>
-                            This prescreening MCQ exam is scheduled from <strong>11:00 AM to 11:35 AM</strong>. Candidates must complete and submit within this time window.
+                            This prescreening MCQ exam submission window closes at <strong>11:35 AM</strong>. Candidates must complete and submit before this time.
                         </p>
                     </div>
 
@@ -734,6 +755,7 @@
                         </p>
                     </div>
                 </aside>
+
             </section>
 
             <section class="content-grid">
@@ -789,7 +811,7 @@
     </div>
 
     <script>
-        const releaseTime = new Date("2026-04-26T11:00:00+06:00");
+        const releaseTime = new Date();
         const deadlineTime = new Date("2026-04-26T11:35:00+06:00");
 
         const statusLine = document.getElementById("statusLine");
